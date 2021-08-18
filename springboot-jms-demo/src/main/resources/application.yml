@@ -1,0 +1,7 @@
+#springboot 自动读取
+server:
+  port: 8080
+#默认的配置，如果需要外部的tcp则需要自行修改路径
+spring :
+  activemq:
+    broker-url: tcp://localhost:61616?jms.useAsyncSend=true

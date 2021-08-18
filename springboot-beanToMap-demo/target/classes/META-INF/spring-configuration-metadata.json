@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource",
+      "type": "com.sz.MainController",
+      "sourceType": "com.sz.MainController"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

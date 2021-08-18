@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/activemq-demo" />
+    <file type="web" url="file://$PROJECT_DIR$/hessian-demo" />
+    <file type="web" url="file://$PROJECT_DIR$/hessian-demo02" />
+    <file type="web" url="file://$PROJECT_DIR$/xss-filter-demo" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/hessian-demo02/pom.xml" />
+        <option value="$PROJECT_DIR$/activemq-unix-receive-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/match-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/activemq-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/data-store-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-demo02/pom.xml" />
+        <option value="$PROJECT_DIR$/ftp-client-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/xss-filter/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-task-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/ftp-simple-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/ftputilbycreate-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/ftp-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/ftp-to-sftp-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/mysql-to-tidb-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaFx-application/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-benaToMap-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-di-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-beanToMap-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-jms/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/basicCheck-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/ftputilBycreate-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-redis-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-demo/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,7 @@
+#springboot �Զ���ȡ
+server:
+  port: 8080
+#Ĭ�ϵ����ã������Ҫ�ⲿ��tcp����Ҫ�����޸�·��
+spring :
+  activemq:
+    broker-url: tcp://localhost:61616?jms.useAsyncSend=true

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+        <!--指定当前xml文件匹配的接口-->
+<mapper namespace="com.sz.mapper.AccountMapper">
+
+<!--<resultMap id="ResultMap" type="com.sz.domain.Account">-->
+<!--<id property="id" column="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>-->
+<!--<result property="name" column="name" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+<!--<result property="money" column="money" javaType="java.lang.Double" jdbcType="DOUBLE"/>-->
+<!--</resultMap>-->
+
+    <select  id="findAll" resultType="com.sz.domain.Account" parameterType="Integer">
+        select *
+        from account
+        where 1=1 and id = #{id}
+    </select>
+    <select id="findByProcessId" resultType="com.sz.domain.AfFlow" parameterType="String">
+        SELECT ID, NAME, PROCESSID, PROCESSNAME, STATE, VARIABLES, CREATETIME, UPDATETIME, FINISHTIME, SETTLEDATE, BUSILINE, PROVINCE
+        FROM AF_FLOW
+        where 1=1 and PROCESSID = #{ProcessId};
+    </select>
+</mapper>

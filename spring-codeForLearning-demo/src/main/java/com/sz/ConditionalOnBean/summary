@@ -1,0 +1,26 @@
+条件注解是Spring4提供的一种bean加载特性，主要用于控制配置类和bean初始化条件。
+在springBoot，springCloud一系列框架底层源码中，条件注解的使用到处可见。
+
+我们来分析一下上面示例bean1为何没有实例化？
+ 在spring ioc的过程中，优先解析@Component，@Service，@Controller注解的类。
+ 其次解析配置类，也就是@Configuration标注的类。最后开始解析配置类中定义的bean。
+ 示例代码中bean1是定义在配置类中的，当执行到配置类解析的时候，
+ @Component，@Service，@Controller ,@Configuration标注的类已经全部扫描，
+ 所以这些BeanDifinition已经被同步。 但是bean1的条件注解依赖的是bean2，
+ bean2是被定义的配置类中的，所以此时配置类的解析无法保证先后顺序，就会出现不生效的情况。
+ 同样的道理，如果依赖的是FeignClient，可以设想一下结果？FeignClient最终还是由配置类触发的，
+ 解析的先后顺序同样也不能保证。
+
+解决：以下两种方式：
+1.项目中条件注解依赖的类，大多会交给spring容器管理，所以如果要在配置中Bean通过@ConditionalOnBean依赖
+ 配置中的Bean时，完全可以用@ConditionalOnClass(Bean2.class)来代替。
+2.如果一定要区分两个配置类的先后顺序，可以将这两个类交与EnableAutoConfiguration管理和触发。
+ 也就是定义在META-INF\spring.factories中声明是配置类，然后通过@AutoConfigureBefore、
+ AutoConfigureAfter  AutoConfigureOrder控制先后顺序。之所以这么做是因为这三个注解只对自动配置类的
+ 先后顺序生效。
+这里推荐第一种。
+
+总结：
+在配置类中定义Bean，如果使用@ConditionalOnBean注解依赖的Bean是通过配置类触发解析的，
+ 则执行结果依赖配置类加载顺序
+*/

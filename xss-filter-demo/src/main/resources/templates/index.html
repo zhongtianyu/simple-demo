@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试页面</title>
+</head>
+<body>
+    <input type="button" id="btn" value="测试">
+</body>
+
+
+<a href="http://baidu.com">Clickme</a>
+<a href="javascript:alert(1)">Clickme</a>
+<a href="rhainfosec.com" onmouseover=alert(1)>ClickHere</a>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $("#btn").click(function () {
+        $.post("xss/button",function (result) {
+            alert("result:"+JSON.stringify(result));//stringify():对象,parse():String
+        },"json");
+    });
+</script>
+</html>
